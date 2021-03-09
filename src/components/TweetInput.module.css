@@ -7,6 +7,14 @@
   cursor: pointer;
   margin-top: 2px;
 }
+.tweet_logout{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color:white;
+  margin-left: 10px;
+  padding: 5px;
+}
 .tweet_input {
   margin-left: 40px;
   width: 90%;

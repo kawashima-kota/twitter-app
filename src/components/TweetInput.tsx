@@ -6,6 +6,7 @@ import {auth,storage,db} from "../firebase/index"
 import { Avatar, Button, IconButton } from "@material-ui/core";
 import firebase from "firebase/app"
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 const TweetInput:React.FC = () => {
   const user = useSelector(selectUser);
@@ -100,6 +101,16 @@ const TweetInput:React.FC = () => {
               />
             </label>
           </IconButton>
+          <button
+            className={styles.tweet_logout}
+            onClick = {
+              async () => {
+                await auth.signOut();
+              }
+            }
+          >
+          <ExitToAppIcon />
+          </button>
         </div>
         <Button
           type="submit"
