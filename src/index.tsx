@@ -6,10 +6,20 @@ import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
+import { Route, BrowserRouter } from "react-router-dom";
+import Account from "../src/components/Account"
+import MenuBar from "../src/components/MenuBar"
+import { Menu } from '@material-ui/core';
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+    <BrowserRouter>
+      <>
+      <Route exact path="/" component={App} />
+      <Route exact path="/account" component={Account} />
+      </>
+    </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

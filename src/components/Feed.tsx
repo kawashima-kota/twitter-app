@@ -4,7 +4,7 @@ import TweetInput from "./TweetInput";
 import styles from "./Feed.module.css"
 import Post from "./Post";
 
-const Feed :React.FC= () => {
+const Feed :React.FC= (props:any) => {
   const [posts,setPosts] = useState([
     {
       id:"",

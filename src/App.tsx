@@ -5,8 +5,9 @@ import { selectUser, login, logout } from "./features/userSlice";
 import { auth } from "./firebase/index";
 import Feed from "./components/Feed";
 import Auth from "./components/Auth";
+import MenuBar from "./components/MenuBar";
 
-const App: React.FC = () => {
+const App: React.FC = (props:any) => {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
@@ -32,8 +33,11 @@ const App: React.FC = () => {
   return (
     <>
       {user.uid ? (
+        <div>
+          <MenuBar />
         <div className={styles.app}>
           <Feed />
+        </div>
         </div>
       ) : (
         <Auth />

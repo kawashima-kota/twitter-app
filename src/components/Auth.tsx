@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     backgroundImage:
-      "url(https://images.unsplash.com/photo-1581784368651-8916092072cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80)",
+      "url(https://gendai.ismcdn.jp/mwimgs/0/d/640m/img_0d810b92d6721811387368a00607e9d0249350.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -158,7 +158,7 @@ const Auth: React.FC = () => {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Come in Math Tweets!!
           </Typography>
           <form className={classes.form} noValidate>
             {!isLogin && (
